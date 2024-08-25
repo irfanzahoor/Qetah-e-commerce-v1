@@ -1,0 +1,364 @@
+{% extends "templates/primary.html" %}
+
+{% block title %}  QETAH | product {% endblock %}
+
+{% block content %}
+
+
+   
+  <!-- Student Header -->
+    <div class="content-area" :class="{'shifted-content': isStatic}">
+        <div class="container section-products">
+            <div class="filters">
+                <div class="category-filters">
+                    <h5>Category</h5>
+                    <hr>
+                    <label class="check check-dark mt-2"><input type="checkbox"/> Men's Collection </label>
+                    <label class="check check-dark"><input type="checkbox"/> Women's Collection </label>
+                    <label class="check check-dark"><input type="checkbox"/> Services </label>
+                    <h5>Price Range</h5>
+                    <hr>
+                    <div class="range-slider">
+                        <span class="rangeValues"></span>
+                        <input value="1000" min="1000" max="50000" step="500" type="range">
+                        <input value="50000" min="1000" max="50000" step="500" type="range">
+                    </div>
+                    <h5 class="mt-3">By Rating</h5>
+                    <hr>
+                    <div class="field-rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" title="5 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 star"></label>
+                    </div>
+                    <h5>Discount's</h5>
+                    <hr>
+                    <label class="check check-dark mt-2"><input type="checkbox"/> Sale 35% OFF </label>
+                    <label class="check check-dark"><input type="checkbox"/> Sale 50% OFF </label>
+                    <label class="check check-dark"><input type="checkbox"/> Sale 75% OFF </label>
+                </div>
+            </div>
+            <div class="filtered-cards">
+                <div class="container model-container" x-data="{ isOpen: false }">
+                    <button class="btn btn-light btn-icon btn-circle btn-circle-sm bx bx-filter btn-model" x-on:click="isOpen = true"></button>
+                    <div class="modal active" x-show="isOpen" x-transition>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-head">
+                                    <h3 class="modal-title">Filter</h3>
+                                    <button x-on:click="isOpen = false" class="btn btn-danger btn-icon btn-circle btn-circle-sm bx bx-x"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="filters-model-body">
+                                        <div class="category-filters">
+                                            <h5>Category</h5>
+                                            <hr>
+                                            <label class="check check-dark mt-2"><input type="checkbox" /> Men's Collection </label>
+                                            <label class="check check-dark"><input type="checkbox" /> Women's Collection </label>
+                                            <label class="check check-dark"><input type="checkbox" /> Services </label>
+                                            <h5>Price Range</h5>
+                                            <hr>
+                                            <div class="model-range-slider">
+                                                <span class="rangeValues"></span>
+                                                <input value="1000" min="1000" max="50000" step="500" type="range">
+                                                <input value="50000" min="1000" max="50000" step="500" type="range">
+                                            </div>
+                                            <h5 class="mt-3">By Rating</h5>
+                                            <hr>
+                                            <div class="field-rating">
+                                                <input type="radio" id="star5" name="rating" value="5">
+                                                <label for="star5" title="5 stars"></label>
+                                                <input type="radio" id="star4" name="rating" value="4">
+                                                <label for="star4" title="4 stars"></label>
+                                                <input type="radio" id="star3" name="rating" value="3">
+                                                <label for="star3" title="3 stars"></label>
+                                                <input type="radio" id="star2" name="rating" value="2">
+                                                <label for="star2" title="2 stars"></label>
+                                                <input type="radio" id="star1" name="rating" value="1">
+                                                <label for="star1" title="1 star"></label>
+                                            </div>
+                                            <h5>Discount's</h5>
+                                            <hr>
+                                            <label class="check check-dark mt-2"><input type="checkbox" /> Sale 35% OFF </label>
+                                            <label class="check check-dark"><input type="checkbox" /> Sale 50% OFF </label>
+                                            <label class="check check-dark"><input type="checkbox" /> Sale 75% OFF </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-foot">
+                                    <button class="btn" x-on:click="isOpen = false">Cancel</button>
+                                    <button class="btn btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="field field-inline">
+                    <input type="text" class="field-text" placeholder="Search..." />
+                    <button class="field-icon bx bx-search"></button>
+                </form>
+                <div class="cards">
+                    <div class="boxed">
+                        <div class="tabs" x-data="{ OpenTab : 1}">
+                            <div class="tabs-items">
+                            <button class="tab-item " :class="OpenTab == 1 ? 'active' : 'inactive'" @click="OpenTab = 1">All</button>
+                            <button class="tab-item " :class="OpenTab == 2 ? 'active' : 'inactive'" @click="OpenTab = 2">Un-stiched</button>
+                            <button class="tab-item " :class="OpenTab == 3 ? 'active' : 'inactive'" @click="OpenTab = 3">ReadyMade</button>
+                            <button class="tab-item " :class="OpenTab == 4 ? 'active' : 'inactive'" @click="OpenTab = 4">Accessories</button>
+                            <button class="tab-item " :class="OpenTab == 5 ? 'active' : 'inactive'" @click="OpenTab = 5">Perfumes</button>
+                            <button class="tab-item " :class="OpenTab == 6 ? 'active' : 'inactive'" @click="OpenTab = 6">Cutting & Stiching</button>
+                            </div>
+                            <div class="tab-panes">
+                            <div x-show="OpenTab == 1" class="tab-pane">
+                              
+                                <div class="row">
+                                    <div class="products">
+                                        <div class="badge badge-primary badge-pill">HOT</div>
+                                        <div class="card product-card">
+                                            <a href="./product-detail.html">
+                                            <div class="card-head">
+                                                <img class="card-image" src="/assets/qetah/images/nike-product.jpg">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-title">Nike Space-X Shoes</div>
+                                                <div class="card-desc text-ellipsis text-ellipsis-2">
+                                                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti est harum ipsa, officiis quidem quia impedit at nobis sunt, asperiores rerum accusamus reiciendis eum voluptatem debitis, illum ipsum incidunt consequatur.cipit condimentum.Lorem ipsum 
+                                                        dolor sit amet, consectetur adipiscing elit. Quisque ut risus sit amet nisl suscipit condimentum. 
+                                                </div>
+                                                <div class="card-subtitle"><del>USD 1500</del></div>
+                                                <div class="card-title">USD 1000</div>
+                                                <div class="card-rating">
+                                                    <i class="bx bxs-star"></i>
+                                                    <span>4.9</span>(12.3k) Sold
+                                                </div>
+                                            </div>
+                                        </a>
+                                            <div class="card-foot">
+                                                <button class="btn btn-light btn-icon btn-pill"><i class="bx bx-cart icon-pre"></i> Buy Now </button>  
+                                                <button class="btn btn-light btn-icon btn-circle bx bx-heart"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products">
+                                        <div class="badge badge-primary badge-pill">HOT</div>
+                                        <div class="card product-card">
+                                            <a href="./product-detail.html">
+                                            <div class="card-head">
+                                                <img class="card-image" src="/assets/qetah/images/nike-product.jpg">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-title">Nike Space-X Shoes</div>
+                                                <div class="card-desc text-ellipsis text-ellipsis-2">
+                                                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti est harum ipsa, officiis quidem quia impedit at nobis sunt, asperiores rerum accusamus reiciendis eum voluptatem debitis, illum ipsum incidunt consequatur.cipit condimentum.Lorem ipsum 
+                                                        dolor sit amet, consectetur adipiscing elit. Quisque ut risus sit amet nisl suscipit condimentum. 
+                                                </div>
+                                                <div class="card-subtitle"><del>USD 1500</del></div>
+                                                <div class="card-title">USD 1000</div>
+                                                <div class="card-rating">
+                                                    <i class="bx bxs-star"></i>
+                                                    <span>4.9</span>(12.3k) Sold
+                                                </div>
+                                            </div>
+                                        </a>
+                                            <div class="card-foot">
+                                                <button class="btn btn-light btn-icon btn-pill"><i class="bx bx-cart icon-pre"></i> Buy Now </button>  
+                                                <button class="btn btn-light btn-icon btn-circle bx bx-heart"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products">
+                                        <div class="badge badge-primary badge-pill">HOT</div>
+                                        <div class="card product-card">
+                                            <a href="./product-detail.html">
+                                            <div class="card-head">
+                                                <img class="card-image" src="/assets/qetah/images/nike-product.jpg">
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card-title">Nike Space-X Shoes</div>
+                                                <div class="card-desc text-ellipsis text-ellipsis-2">
+                                                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti est harum ipsa, officiis quidem quia impedit at nobis sunt, asperiores rerum accusamus reiciendis eum voluptatem debitis, illum ipsum incidunt consequatur.cipit condimentum.Lorem ipsum 
+                                                        dolor sit amet, consectetur adipiscing elit. Quisque ut risus sit amet nisl suscipit condimentum. 
+                                                </div>
+                                                <div class="card-subtitle"><del>USD 1500</del></div>
+                                                <div class="card-title">USD 1000</div>
+                                                <div class="card-rating">
+                                                    <i class="bx bxs-star"></i>
+                                                    <span>4.9</span>(12.3k) Sold
+                                                </div>
+                                            </div>
+                                        </a>
+                                            <div class="card-foot">
+                                                <button class="btn btn-light btn-icon btn-pill"><i class="bx bx-cart icon-pre"></i> Buy Now </button>  
+                                                <button class="btn btn-light btn-icon btn-circle bx bx-heart"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link " href="#">Next</a></li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+     
+{% endblock %}
+  {% block scripts %} 
+
+    <script>
+        function getVals(){
+  // Get slider values
+  let parent = this.parentNode;
+  let slides = parent.getElementsByTagName("input");
+    let slide1 = parseFloat( slides[0].value );
+    let slide2 = parseFloat( slides[1].value );
+  // Neither slider will clip the other, so make sure we determine which is larger
+  if( slide1 > slide2 ){ let tmp = slide2; slide2 = slide1; slide1 = tmp; }
+  
+  let displayElement = parent.getElementsByClassName("rangeValues")[0];
+      displayElement.innerHTML = "$" + slide1 + " - $" + slide2;
+}
+
+window.onload = function(){
+  // Initialize Sliders
+  let sliderSections = document.getElementsByClassName("range-slider");
+      for( let x = 0; x < sliderSections.length; x++ ){
+        let sliders = sliderSections[x].getElementsByTagName("input");
+        for( let y = 0; y < sliders.length; y++ ){
+          if( sliders[y].type ==="range" ){
+            sliders[y].oninput = getVals;
+            // Manually trigger event first time to display values
+            sliders[y].oninput();
+          }
+        }
+      }
+}
+    </script>
+    <script>
+        var swiper = new Swiper('.blog-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: true,
+            mousewheel: {
+                invert: false,
+            },
+            // autoHeight: true,
+            pagination: {
+                el: '.blog-slider__pagination',
+                clickable: true,
+            }
+        });
+    </script>
+        <script>
+            const swiper1 = new Swiper('.product-slider', {
+                loop:true,
+                slidesPerView: 4,
+                spaceBetween: 30,
+            
+                autoplay: {
+                    delay: 3000,
+                    loop:true,
+                },
+            
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+    
+            document.querySelector('.backward').addEventListener('click', function(){
+                swiper1.slideNext();
+            })
+    
+            document.querySelector('.forward').addEventListener('click', function(){
+                swiper1.slidePrev();
+            })
+        </script>
+        <script>
+       var customerReviewSwiper = new Swiper('.slide-container', {
+    loop: true,
+    slidesPerView: 1,  // Ensures only one slide is shown at a time
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+        </script>
+    <script>
+        AOS.init({
+  duration: 600, // Duration of animation
+  easing: 'ease-in-out', // Animation easing
+  once: true // Animation only happens once
+});
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            // Autoplay configuration
+            autoplay: {
+              delay: 4000, // Delay between slides in milliseconds (2500ms = 2.5s)
+            disableOnInteraction: false, // Continue autoplay after user interaction
+            },
+        });
+    </script>
+    <!-- counter -->
+   <script> 
+  document.querySelectorAll('.quantity-counter').forEach(counter => {
+    let count = 0;
+
+    const counterValue = counter.querySelector('.counter-value');
+    const counterIncrement = counter.querySelector('.counter-increment');
+    const counterDecrement = counter.querySelector('.counter-decrement');
+
+    counterIncrement.addEventListener('click', () => {
+        count++;
+        counterValue.value = count;
+    });
+
+    counterDecrement.addEventListener('click', () => {
+        if (count > 0) { // Only decrement if count is greater than 0
+            count--;
+            counterValue.value = count;
+        }
+    });
+});
+   </script>
+{% endblock %}

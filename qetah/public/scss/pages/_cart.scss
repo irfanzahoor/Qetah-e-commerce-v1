@@ -1,0 +1,258 @@
+.cart {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .row {
+    align-items: normal;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+  .select-items {
+    label,
+    button {
+      text-transform: uppercase;
+      @media (max-width:425px) {
+        font-size: 14px;
+      font-weight: 500;
+      }
+      @media (max-width:425px) {
+        font-size: 12px;
+      }
+      @media (max-width:375px) {
+        font-size: 11px;
+      }
+    }
+
+    button {
+      border: none;
+      box-shadow: none;
+      background: transparent;
+
+      &:focus,
+      &:hover {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        color: var(--danger);
+      }
+    }
+  }
+
+  .card-webinar {
+    width: 800px;
+    @media (max-width: 1024px) {
+      width: 580px;
+    }
+    @media (max-width: 768px) {
+      width: 660px;
+    }
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+    .card-head {
+      padding: 10px;
+      span {
+        .check-secondary {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .cart-card {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    @media (max-width: 425px) {
+      display: block;
+    }
+    .card-head {
+      padding: 0;
+      width: 60%;
+      @media (max-width: 425px) {
+        width: 100%;
+      }
+      .check-secondary {
+        padding-right: 0;
+      }
+
+      .cart-conent {
+        display: flex;
+
+        .image {
+          width: 100px;
+          height: 100px;
+          border-radius: 0.5rem;
+          @media(max-width:320px){
+            width: 70px;
+            height: 70px;
+          }
+        }
+
+        .card-desc {
+          margin: 0;
+          margin-left: 10px;
+
+          p {
+            margin-bottom: 5px;
+            color: var(--text);
+          }
+
+          span {
+            color: #00000080;
+          }
+        }
+      }
+    }
+
+    .card-body {
+      width: 15%;
+      @media (max-width: 425px) {
+        width: 100%;
+        margin: 10px 0;
+        justify-content: end;
+      }
+      .prices {
+        @media (max-width: 425px) {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .price {
+          color: var(--danger);
+          font-weight: 600;
+          @media (max-width: 425px) {
+            margin: 0;
+          }
+        }
+        .discount {
+          color: #00000063;
+          font-weight: 500;
+          @media (max-width: 425px) {
+            margin: 0;
+          }
+        }
+        .icon-group {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span:first-child {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+    .card-foot {
+      width: 20%;
+      @media (max-width: 425px) {
+        width: 100%;
+      }
+      .quantity-counter {
+        display: flex;
+        margin-left: auto;
+        justify-content: space-between;
+        align-items: center;
+
+        .price {
+          margin-bottom: 0px;
+          margin-top: 12px;
+          font-weight: 600;
+          color: #6b6b6b;
+        }
+        .counter {
+          margin-top: 10px;
+          @media (max-width: 1024px) {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          @media (max-width: 425px) {
+            margin-left: auto;
+          }
+          .value {
+            border: 1px solid #adadad;
+            border-radius: 3px;
+            width: 42px;
+            padding: 4px;
+            height: 27px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .card-summary {
+    position: sticky;
+    top: 0;
+    .card-head {
+      padding: 10px;
+      span {
+        color: #00000080;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      p {
+        color: var(--text);
+        font-weight: normal;
+        margin: 0;
+        margin-top: 10px;
+        padding-left: 10px;
+      }
+    }
+    .card-body {
+      .card-summary {
+        .summary-content {
+          display: flex;
+          align-items: center;
+          margin-top: 20px;
+          p {
+            margin: 0;
+          }
+          span {
+            margin-left: auto;
+          }
+        }
+      }
+      .voucher {
+        margin: 10px 0;
+        margin-top: 30px;
+        .voucher-input-control {
+          display: flex;
+          align-items: center;
+          @media (max-width:375px) {
+            display: block;
+          }
+          .field {
+            margin: 0 10px 0 0;
+            @media (max-width:375px) {
+              margin: 10px 0;
+            }
+          }
+          button.btn{
+            @media (max-width:375px) {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .card-foot {
+      padding-top: 10px;
+      .summary-content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        p {
+          margin: 0;
+        }
+        span {
+          margin-left: auto;
+        }
+}
+}
+}
+}

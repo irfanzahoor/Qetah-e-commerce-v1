@@ -1,0 +1,48 @@
+.sidebar-header{
+    background-color: #F8F8F8;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+.program-sidebar{
+}
+    .sidebar-auth{
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px !important;
+    .auth-media{
+        align-items: start !important;
+        i{
+            font-size: 20px !important;
+            color: #6b6b6b !important;
+        }
+        .auth-intro{
+    padding: 0px 10px;
+    .cursor-pointer{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+        }
+        .drops{
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    margin: 5px 0px;
+                    padding: 10px;
+                    a{
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        background-color: white;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                        border-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+}

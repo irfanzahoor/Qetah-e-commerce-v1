@@ -1,0 +1,283 @@
+{% extends "templates/primary.html" %}
+
+{% block title %}  QETAH | Blogs {% endblock %}
+
+{% block content %}
+<!-- Student Header -->
+    <div class="content-area" :class="{'shifted-content': isStatic}">
+      <main class="container boxed">
+        <h1 class="heading">Blogs</h1>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="" class="breadcrumb-link">Home</a></li>
+          <li class="breadcrumb-item active">blogs</li>
+        </ol>
+        <section class="row">
+          <div class="col blog-section">
+            <article
+              class="card card-blog"
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-easing="ease-in-out"
+            >
+              <a class="card-image image-zoom" href="/blog-detail">
+                <img src="/assets/qetah/images/blogs.jpg" class="image" loading="lazy" alt="" />
+              </a>
+              <div class="card-body">
+                <span class="card-badge">News</span>
+                <h3 class="card-title">
+                  <a href="/blog-detail"
+                    >Top 5 technologies in 2023 you should learn</a
+                  >
+                </h3>
+                <p class="card-subtitle">24-july-2023</p>
+              </div>
+            </article>
+          </div>
+          <div class="col blog-section">
+            <article
+              class="card card-blog"
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-easing="ease-in-out"
+            >
+              <a class="card-image image-zoom" href="./blog-detail.html">
+                <img src="/assets/qetah/images/blogs.jpg" class="image" loading="lazy" alt="" />
+              </a>
+              <div class="card-body">
+                <span class="card-badge">News</span>
+                <h3 class="card-title">
+                  <a href="./blog-detail.html"
+                    >Top 5 technologies in 2023 you should learn</a
+                  >
+                </h3>
+                <p class="card-subtitle">24-july-2023</p>
+              </div>
+            </article>
+          </div>
+          <div class="col blog-section">
+            <article
+              class="card card-blog"
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-easing="ease-in-out"
+            >
+              <a class="card-image image-zoom" href="./blog-detail.html">
+                <img src="/assets/qetah/images/blogs.jpg" class="image" loading="lazy" alt="" />
+              </a>
+              <div class="card-body">
+                <span class="card-badge">News</span>
+                <h3 class="card-title">
+                  <a href="./blog-detail.html"
+                    >Top 5 technologies in 2023 you should learn</a
+                  >
+                </h3>
+                <p class="card-subtitle">24-july-2023</p>
+              </div>
+            </article>
+          </div>
+          <div class="col blog-section">
+            <article
+              class="card card-blog"
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-easing="ease-in-out"
+            >
+              <a class="card-image image-zoom" href="./blog-detail.html">
+                <img src="/assets/qetah/images/blogs.jpg" class="image" loading="lazy" alt="" />
+              </a>
+              <div class="card-body">
+                <span class="card-badge">News</span>
+                <h3 class="card-title">
+                  <a href="./blog-detail.html"
+                    >Top 5 technologies in 2023 you should learn</a
+                  >
+                </h3>
+                <p class="card-subtitle">24-july-2023</p>
+              </div>
+            </article>
+          </div>
+          <div class="col blog-section">
+            <article
+              class="card card-blog"
+              data-aos-duration="1000"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-easing="ease-in-out"
+            >
+              <a class="card-image image-zoom" href="./blog-detail.html">
+                <img src="/assets/qetah/images/blogs.jpg" class="image" loading="lazy" alt="" />
+              </a>
+              <div class="card-body">
+                <span class="card-badge">News</span>
+                <h3 class="card-title">
+                  <a href="./blog-detail.html"
+                    >Top 5 technologies in 2023 you should learn</a
+                  >
+                </h3>
+                <p class="card-subtitle">24-july-2023</p>
+              </div>
+            </article>
+          </div>
+   
+   
+        </section>
+        <section class="pagination load-more">
+          <button class="btn btn-secondary btn-pill">Load More</button>
+        </section>
+      </main>
+      </div>
+       
+{% endblock %}
+  {% block scripts %} 
+
+ <script>
+     new Swiper('.product-slider', {
+ loop: true,
+ slidesPerView: 4,
+ spaceBetween: 30,
+ navigation: {
+     nextEl: '.slide-next',
+     prevEl: '.slide-prev',
+ },
+ autoplay: {
+     delay: 3000,
+     disableOnInteraction: false,
+ },
+ breakpoints: {
+     640: {
+         slidesPerView: 1,
+         spaceBetween: 20,
+     },
+     768: {
+         slidesPerView: 2,
+         spaceBetween: 40,
+     },
+     1024: {
+         slidesPerView: 3,
+         spaceBetween: 50,
+     },
+ },
+});
+
+
+new Swiper('.mySwiper', {
+ loop: true,
+ navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+ },
+ pagination: {
+     el: '.swiper-pagination',
+     dynamicBullets: true,
+ },
+ autoplay: {
+     delay: 4000,
+     disableOnInteraction: false,
+ },
+});
+
+new Swiper('.blog-slider', {
+ slidesPerView: 1,
+ pagination: true,
+ navigation: {
+     nextEl: '.slide-next',
+     prevEl: '.slide-prev',
+ },
+ breakpoints: {
+     340: {
+         slidesPerView: 1,
+     },
+     576: {
+         slidesPerView: 4,
+     },
+     768: {
+         slidesPerView: 4,
+     },
+     992: {
+         slidesPerView: 4,
+     },
+ },
+ autoplay: {
+     delay: 3000,
+     disableOnInteraction: false,
+ },
+ loop: true,
+});
+ </script>
+ 
+     <script>
+    var customerReviewSwiper = new Swiper('.slide-container', {
+ loop: true,
+ slidesPerView: 1,  // Ensures only one slide is shown at a time
+ autoplay: {
+     delay: 3000,
+     disableOnInteraction: false,
+ },
+ navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+ },
+});
+
+
+     </script>
+  <script>
+     AOS.init({
+duration: 600, // Duration of animation
+easing: 'ease-in-out', // Animation easing
+once: true // Animation only happens once
+});
+ </script>
+ <!-- counter -->
+<script> 
+document.querySelectorAll('.quantity-counter').forEach(counter => {
+ let count = 0;
+
+ const counterValue = counter.querySelector('.counter-value');
+ const counterIncrement = counter.querySelector('.counter-increment');
+ const counterDecrement = counter.querySelector('.counter-decrement');
+
+ counterIncrement.addEventListener('click', () => {
+     count++;
+     counterValue.value = count;
+ });
+
+ counterDecrement.addEventListener('click', () => {
+     if (count > 0) { // Only decrement if count is greater than 0
+         count--;
+         counterValue.value = count;
+     }
+ });
+});
+</script>
+<!-- aside -->
+<script>
+ const body = document.querySelector("body"),
+sidebar = document.querySelector(".sidebar"),
+toggle = document.querySelector(".toggle"),
+modeSwitch = document.querySelector(".toggle-switch"),
+modeText = document.querySelector(".mode-text"),
+searchBtn = document.querySelector(".search-bar");
+
+modeSwitch.addEventListener("click", () => {
+body.classList.toggle("dark");
+//   document.querySelector(".mode-text").innertext=""
+
+if (body.classList.contains("dark")) {
+ modeText.innerText = " Light Mode ";
+} else modeText.innerText = " Dark Mode ";
+});
+
+toggle.addEventListener("click", () => {
+sidebar.classList.toggle("close");
+});
+
+searchBtn.addEventListener("click", () => {
+sidebar.classList.remove("close");
+});
+</script>
+{% endblock %}

@@ -1,0 +1,505 @@
+{% extends "templates/primary.html" %}
+
+{% block title %} QETAH | Cart Items {% endblock %}
+
+{% block content %}
+<!-- Student Header -->
+<body>
+    <div class="content-area" :class="{'shifted-content': isStatic}">
+    <div class="container cart">
+      <div class="row row-col-2">
+        <div class="col">
+          <div class="cart-product">
+            <div class="card card-webinar">
+              <div class="card-head select-items">
+                <span>
+                  <label class="check check-secondary"
+                    ><input type="checkbox" /> Select All (7 item(s))</label
+                  >
+                </span>
+                <button class="btn btn-light btn-icon">
+                  <i class="bx bx-trash icon-pre"></i> Delet
+                </button>
+              </div>
+            </div>
+            <div class="card card-webinar cart-product-card">
+              <div class="card-head">
+                <span>
+                  <label class="check check-secondary"
+                    ><input type="checkbox" /> Accessory HUB(Lahore)</label
+                  >
+                </span>
+              </div>
+              <hr />
+              <div class="cart-card">
+                <div class="card-head">
+                  <div class="checkbox">
+                    <label class="check check-secondary"
+                      ><input type="checkbox"
+                    /></label>
+                  </div>
+                  <div class="cart-conent">
+                    <img
+                      src="/assets/qetah/images/nike-product.jpg"
+                      alt="Product Image"
+                      class="image"
+                    />
+                    <div class="card-desc">
+                      <p class="text-ellipsis text-ellipsis-2">
+                        text trancate loremThis component truncates text with an
+                        ellipsis (...) when it exceeds the width of its
+                        container, useful for displaying long text in a limited
+                        space.Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Quisque ut risus sit amet nisl suscipit
+                        condimentum.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Quisque ut risus sit amet nisl suscipit
+                        condimentum.
+                      </p>
+                      <span>No Brand, Color Family:White</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="prices">
+                    <p class="price">Rs. 799</p>
+                    <p class="discount"><s>Rs. 200</s></p>
+                    <div class="icon-group">
+                      <span class="wishlist"><i class="bx bx-heart"></i></span>
+                      <span class="wishlist"><i class="bx bx-trash"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-foot">
+                  <div class="quantity-counter">
+                    <div class="counter">
+                      <button
+                        class="btn btn-light btn-icon btn-circle btn-circle-sm bx bx-minus counter-decrement decrement"
+                      ></button>
+                      <input
+                        class="counter-value value"
+                        type="number"
+                        value="0"
+                      />
+                      <button
+                        class="btn btn-light btn-icon btn-circle btn-circle-sm bx bx-plus counter-increment increment"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-product">
+            <div class="card card-webinar cart-product-card">
+              <div class="card-head">
+                <span>
+                  <label class="check check-secondary"
+                    ><input type="checkbox" /> Accessory HUB(Lahore)</label
+                  >
+                </span>
+              </div>
+              <hr />
+              <div class="cart-card">
+                <div class="card-head">
+                  <div class="checkbox">
+                    <label class="check check-secondary"
+                      ><input type="checkbox"
+                    /></label>
+                  </div>
+                  <div class="cart-conent">
+                    <img
+                      src="/assets/qetah/images/nike-product.jpg"
+                      alt="Product Image"
+                      class="image"
+                    />
+                    <div class="card-desc">
+                      <p class="text-ellipsis text-ellipsis-2">
+                        text trancate loremThis component truncates text with an
+                        ellipsis (...) when it exceeds the width of its
+                        container, useful for displaying long text in a limited
+                        space.Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Quisque ut risus sit amet nisl suscipit
+                        condimentum.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Quisque ut risus sit amet nisl suscipit
+                        condimentum.
+                      </p>
+                      <span>No Brand, Color Family:White</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="prices">
+                    <p class="price">Rs. 799</p>
+                    <p class="discount"><s>Rs. 200</s></p>
+                    <div class="icon-group">
+                      <span class="wishlist"><i class="bx bx-heart"></i></span>
+                      <span class="wishlist"><i class="bx bx-trash"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-foot">
+                  <div class="quantity-counter">
+                    <div class="counter">
+                      <button
+                        class="btn btn-light btn-icon btn-circle btn-circle-sm bx bx-minus counter-decrement decrement"
+                      ></button>
+                      <input
+                        class="counter-value value"
+                        type="number"
+                        value="0"
+                      />
+                      <button
+                        class="btn btn-light btn-icon btn-circle btn-circle-sm bx bx-plus counter-increment increment"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-product">
+            <div class="card card-webinar cart-product-card">
+              <div class="card-head">
+                <span>
+                  <label class="check check-secondary"
+                    ><input type="checkbox" /> Accessory HUB(Lahore)</label
+                  >
+                </span>
+              </div>
+              <hr />
+              <div class="cart-card">
+                <div class="card-head">
+                  <div class="checkbox">
+                    <label class="check check-secondary"
+                      ><input type="checkbox"
+                    /></label>
+                  </div>
+                  <div class="cart-conent">
+                    <img
+                      src="/assets/qetah/images/nike-product.jpg"
+                      alt="Product Image"
+                      class="image"
+                    />
+                    <div class="card-desc">
+                      <p class="text-ellipsis text-ellipsis-2">
+                        text trancate loremThis component truncates text with an
+                        ellipsis (...) when it exceeds the width of its
+                        container, useful for displaying long text in a limited
+                        space.Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Quisque ut risus sit amet nisl suscipit
+                        condimentum.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Quisque ut risus sit amet nisl suscipit
+                        condimentum.
+                      </p>
+                      <span>No Brand, Color Family:White</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="prices">
+                    <p class="price">Rs. 799</p>
+                    <p class="discount"><s>Rs. 200</s></p>
+                    <div class="icon-group">
+                      <span class="wishlist"><i class="bx bx-heart"></i></span>
+                      <span class="wishlist"><i class="bx bx-trash"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-foot">
+                  <div class="quantity-counter">
+                    <div class="counter">
+                      <button
+                        class="btn btn-light btn-icon btn-circle btn-circle-sm bx bx-minus counter-decrement decrement"
+                      ></button>
+                      <input
+                        class="counter-value value"
+                        type="number"
+                        value="0"
+                      />
+                      <button
+                        class="btn btn-light btn-icon btn-circle btn-circle-sm bx bx-plus counter-increment increment"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-summary">
+            <div class="card-head">
+              <div class="location">
+                <span>Location</span>
+                <p>
+                  <i class="bx bx-location-plus icon-pre"></i> Add Shipping
+                  Address
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="card-body">
+              <div class="card-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-content">
+                  <p class="summary-name">Subtotal (4 items)</p>
+                  <span class="summary-value">Rs. 3,139</span>
+                </div>
+                <div class="summary-content">
+                  <p class="summary-name">Subtotal (4 items)</p>
+                  <span class="summary-value">Rs. 3,139</span>
+                </div>
+                <div class="voucher">
+                  <div class="voucher-input-control">
+                    <span class="field">
+                      <input
+                        type="text"
+                        class="field-text"
+                        placeholder="Enter Voucher Code"
+                      />
+                    </span>
+                    <button type="button" class="btn btn-secondary">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-foot">
+              <div class="summary-content">
+                <p class="summary-name">Subtotal (4 items)</p>
+                <span class="summary-value text-danger">Rs. 3,139</span>
+              </div>
+              <button class="btn btn-secondary btn-sm btn-block">
+                Proceed To Checkout(5)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="container products">
+        <h1>Just For You</h1>
+        <!-- Slider main container -->
+        <div class="swiper product-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="products">
+                        <div class="badge badge-primary badge-pill">HOT</div>
+                        <div class="card product-card">
+                            <a href="/product">
+                            <div class="card-head">
+                                <img class="card-image" src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/primary/ProductShowcasesampleimages/JPEG/Product+Showcase-1.jpg">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Nike Space-X Shoes</div>
+                                <div class="card-desc text-ellipsis text-ellipsis-2">
+                                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti est harum ipsa, officiis quidem quia impedit at nobis sunt, asperiores rerum accusamus reiciendis eum voluptatem debitis, illum ipsum incidunt consequatur.cipit condimentum.Lorem ipsum 
+                                        dolor sit amet, consectetur adipiscing elit. Quisque ut risus sit amet nisl suscipit condimentum. 
+                                </div>
+                                <div class="card-subtitle"><del>USD 1500</del></div>
+                                <div class="card-title">USD 1000</div>
+                                <div class="card-rating">
+                                    <i class="bx bxs-star"></i>
+                                    <span>4.9</span>(12.3k) Sold
+                                </div>
+                            </div>
+                        </a>
+                            <div class="card-foot">
+                                <button class="btn btn-light btn-icon btn-pill"><i class="bx bx-cart icon-pre"></i> Buy Now </button>  
+                                <button class="btn btn-light btn-icon btn-circle bx bx-heart"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="slide-next btn btn-secondary btn-sm bx bx-right-arrow-alt"></button>
+            <button class="slide-prev btn btn-secondary btn-sm bx bx-left-arrow-alt"></button>
+        </div>
+{% endblock %}
+  {% block scripts %} 
+
+<script>
+    new Swiper('.product-slider', {
+loop: true,
+slidesPerView: 4,
+spaceBetween: 30,
+navigation: {
+    nextEl: '.slide-next',
+    prevEl: '.slide-prev',
+},
+autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+},
+breakpoints: {
+    320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        425: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+    640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+    },
+    1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+    },
+},
+});
+
+
+new Swiper('.mySwiper', {
+loop: true,
+navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
+pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+},
+autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+},
+});
+
+new Swiper('.blog-slider', {
+slidesPerView: 1,
+pagination: true,
+navigation: {
+    nextEl: '.slide-next',
+    prevEl: '.slide-prev',
+},
+breakpoints: {
+    340: {
+        slidesPerView: 1,
+    },
+    576: {
+        slidesPerView: 4,
+    },
+    768: {
+        slidesPerView: 4,
+    },
+    992: {
+        slidesPerView: 4,
+    },
+},
+autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+},
+loop: true,
+});
+</script>
+
+    <script>
+   var customerReviewSwiper = new Swiper('.slide-container', {
+loop: true,
+slidesPerView: 1,  // Ensures only one slide is shown at a time
+autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+},
+navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
+});
+
+
+    </script>
+ <script>
+    AOS.init({
+duration: 600, // Duration of animation
+easing: 'ease-in-out', // Animation easing
+once: true // Animation only happens once
+});
+</script>
+<!-- cart -->
+<script>
+    document.querySelectorAll(".quantity-counter").forEach((counter) => {
+      let count = 0;
+
+      const counterValue = counter.querySelector(".counter-value");
+      const counterIncrement = counter.querySelector(".counter-increment");
+      const counterDecrement = counter.querySelector(".counter-decrement");
+
+      counterIncrement.addEventListener("click", () => {
+        count++;
+        counterValue.value = count;
+      });
+
+      counterDecrement.addEventListener("click", () => {
+        if (count > 0) {
+          // Only decrement if count is greater than 0
+          count--;
+          counterValue.value = count;
+        }
+      });
+    });
+    </script>
+<!-- counter -->
+<script> 
+document.querySelectorAll('.quantity-counter').forEach(counter => {
+let count = 0;
+
+const counterValue = counter.querySelector('.counter-value');
+const counterIncrement = counter.querySelector('.counter-increment');
+const counterDecrement = counter.querySelector('.counter-decrement');
+
+counterIncrement.addEventListener('click', () => {
+    count++;
+    counterValue.value = count;
+});
+
+counterDecrement.addEventListener('click', () => {
+    if (count > 0) { // Only decrement if count is greater than 0
+        count--;
+        counterValue.value = count;
+    }
+});
+});
+</script>
+<!-- aside -->
+<script>
+const body = document.querySelector("body"),
+sidebar = document.querySelector(".sidebar"),
+toggle = document.querySelector(".toggle"),
+modeSwitch = document.querySelector(".toggle-switch"),
+modeText = document.querySelector(".mode-text"),
+searchBtn = document.querySelector(".search-bar");
+
+modeSwitch.addEventListener("click", () => {
+body.classList.toggle("dark");
+//   document.querySelector(".mode-text").innertext=""
+
+if (body.classList.contains("dark")) {
+modeText.innerText = " Light Mode ";
+} else modeText.innerText = " Dark Mode ";
+});
+
+toggle.addEventListener("click", () => {
+sidebar.classList.toggle("close");
+});
+
+searchBtn.addEventListener("click", () => {
+sidebar.classList.remove("close");
+});
+</script>
+{% endblock %}

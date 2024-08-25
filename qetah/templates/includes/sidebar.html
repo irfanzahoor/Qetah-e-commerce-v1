@@ -1,0 +1,92 @@
+  
+  <!-- sidebar start -->
+  <aside id="sidebar" class="sidebar-header" :class="{'static-sidebar': isStatic}" x-data="{sidebarOpen: false}"
+  @mouseover="expandSidebar" @mouseout="collapseSidebar">
+<!-- Course Sidebar Header -->
+<header class="program-sidebar">
+  <div class="program-sidebar-brand">
+      <div class="sidebar-brand" x-data="{ open: false }">
+          <!-- Large Logo -->
+          <a href="#" class="lg-logo" x-show="isStatic || isHovered">
+              <img src="/assets/qetah/images/black-qetah-removebg-preview.png" width="100px" class="lg-img"
+                  alt="Logo" />
+          </a>
+          <!-- Small Logo -->
+          <a href="#" class="sm-logo">
+              <img src="/assets/qetah/images/WhatsApp_Image_2024-08-08_at_13.44.53_b31d506f-removebg-preview.png"
+                  class="sm-img" alt="Responsive Logo" width="30px" />
+          </a>
+          <!-- Toggle Button -->
+          <button class="btn-toggle" x-show="isStatic || isHovered" x-on:click="open = !open">
+              <label class="switch switch-dark switch-pill">
+                  <input type="checkbox" id="sidebarToggle" @change="toggleSidebar" />
+              </label>
+          </button>
+      </div>
+  </div>
+
+  <div class="sidebar-auth">
+      <div class="auth-media">
+          <i class='bx bx-store'></i>
+          <div class="auth-intro" x-show="isStatic || isHovered || window.innerWidth <= 1024" x-cloak>
+              <h3 class="heading"><a href="/product">Shop</a></h3>
+          </div>
+      </div>
+
+      <!-- Men's Collection Dropdown -->
+      <div class="auth-media">
+          <i class='bx bx-store'></i>
+          <div class="auth-intro" x-show="isStatic || isHovered || window.innerWidth <= 1024" x-cloak>
+              <div class="auth-intro" x-data="{ open: false }">
+                  <div @click="open = !open" class="cursor-pointer">
+                      <h6 class="text-center text-dark" style="cursor: pointer;">Men's Collection</h6>
+                      <i class='bx bx-chevron-down'></i>
+                  </div>
+                  <div class="drops" x-show="open" x-cloak>
+                      <ul class="ml-4">
+                          <li><a  href="/product">Unstitched</a></li>
+                          <li><a href="/product">Readymade Clothes</a></li>
+                          <li><a href="/product">Accessories</a></li>
+                          <li><a href="/product">Perfumes</a></li>
+                          <li><a href="/product">Cutting, Stitching</a></li>
+                      </ul>
+                  </div>
+               </div>
+          </div>
+          
+          
+      </div>
+
+      <!-- Women's Collection Dropdown -->
+      <div class="auth-media">
+          <i class='bx bx-store'></i>
+          <div class="auth-intro" x-show="isStatic || isHovered || window.innerWidth <= 1024" x-cloak>
+              <div class="auth-intro" x-data="{ open: false }">
+                  <div @click="open = !open" class="cursor-pointer">
+                      <h6 class="text-center text-dark" style="cursor: pointer;">Women's Collection</h6>
+                      <i class='bx bx-chevron-down'></i>
+                  </div>
+                  <div class="drops" x-show="open" x-cloak>
+                      <ul class="list ml-4">
+                          <li><a href="/product"><i class='bx bx-'></i> Unstitched</a></li>
+                          <li><a href="/product">Readymade Clothes</a></li>
+                          <li><a href="/product">Accessories</a></li>
+                          <li><a href="/product">Perfumes</a></li>
+                          <li><a href="/product">Cutting, Stitching</a></li>
+                      </ul>
+                  </div>
+               </div>
+          </div>
+      </div>
+      <!-- Additional Sidebar Items -->
+      <div class="auth-media">
+          <i class='bx bx-cart'></i>
+          <div class="auth-intro" x-show="isStatic || isHovered || window.innerWidth <= 1024" x-cloak>
+              <h3 class="heading"><a href="/cart-items">Go To Cart</a></h3>
+          </div>
+      </div>
+  </div>
+</header>
+<!-- Course Sidebar Header End -->
+</aside>
+<!--/ Course Sidebar End -->

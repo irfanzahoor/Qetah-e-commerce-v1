@@ -1,0 +1,678 @@
+.section-products {
+    height: auto;
+    display: flex;
+
+    .filters {
+        padding: 20px;
+        width: 20%;
+
+        .category-filters {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h5 {
+                font-size: 1.2rem;
+                margin-bottom: 0rem;
+            }
+
+            hr {
+                margin:0;
+            }
+
+            .check {
+                &.check-dark {
+                    font-size: 0.875rem;
+                }
+            }
+
+        // doesnt work funnly on firefox or edge, need to fix
+
+.range-slider {
+    width: 185px;
+    text-align: center;
+    position: relative;
+    .rangeValues {
+      display: block;
+       margin: 10px 0px;
+    }
+  }
+  
+  input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 185px;
+    position: absolute;
+    left: 0;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 185px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+  
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--secondary);
+    margin-top: -4px;
+      cursor: pointer;
+        position: relative;
+      z-index: 1;
+  }
+  
+  input[type=range]:focus {
+    outline: none;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+  }
+  
+ 
+  
+  
+  /*hide the outline behind the border*/
+  
+  input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+  }
+  
+  input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+    /*remove default tick marks*/
+    color: transparent;
+      z-index: -4;
+  
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+  }
+  
+  input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+  }
+  
+  input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #21c1ff;
+  }
+  
+  input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+  }
+  
+  input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+  }
+  .field-rating{
+    justify-content: end;
+  }
+  
+        }
+    }
+    .filtered-cards {
+        width: 80%;
+        padding: 20px;
+        .model-container{
+          .model{
+            .model-dialog{
+              .model-content{
+                .model-body{
+                  .filters-model-body {
+                    padding: 20px;
+                    width: 20%;
+            
+                    .category-filters {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        h5 {
+                            font-size: 1.2rem;
+                            margin-bottom: 0rem;
+                        }
+            
+                        hr {
+                            margin:0;
+                        }
+            
+                        .check {
+                            &.check-dark {
+                                font-size: 0.875rem;
+                            }
+                        }
+            
+                    // doesnt work funnly on firefox or edge, need to fix
+            
+            .model-range-slider {
+                width: 185px;
+                text-align: center;
+                position: relative;
+                .rangeValues {
+                  display: block;
+                   margin: 10px 0px;
+                }
+              }
+              
+              input[type=range] {
+                -webkit-appearance: none;
+                border: 1px solid white;
+                width: 185px;
+                position: absolute;
+                left: 0;
+              }
+              
+              input[type=range]::-webkit-slider-runnable-track {
+                width: 185px;
+                height: 5px;
+                background: #ddd;
+                border: none;
+                border-radius: 3px;
+              
+              }
+              
+              input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                border: none;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                background: var(--secondary);
+                margin-top: -4px;
+                  cursor: pointer;
+                    position: relative;
+                  z-index: 1;
+              }
+              
+              input[type=range]:focus {
+                outline: none;
+              }
+              
+              input[type=range]:focus::-webkit-slider-runnable-track {
+                background: #ccc;
+              }
+              
+              input[type=range]::-moz-range-track {
+                width: 300px;
+                height: 5px;
+                background: #ddd;
+                border: none;
+                border-radius: 3px;
+              }
+              
+             
+              
+              
+              /*hide the outline behind the border*/
+              
+              input[type=range]:-moz-focusring {
+                outline: 1px solid white;
+                outline-offset: -1px;
+              }
+              
+              input[type=range]::-ms-track {
+                width: 300px;
+                height: 5px;
+                /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+                background: transparent;
+                /*leave room for the larger thumb to overflow with a transparent border */
+                border-color: transparent;
+                border-width: 6px 0;
+                /*remove default tick marks*/
+                color: transparent;
+                  z-index: -4;
+              
+              }
+              
+              input[type=range]::-ms-fill-lower {
+                background: #777;
+                border-radius: 10px;
+              }
+              
+              input[type=range]::-ms-fill-upper {
+                background: #ddd;
+                border-radius: 10px;
+              }
+              
+              input[type=range]::-ms-thumb {
+                border: none;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                background: #21c1ff;
+              }
+              
+              input[type=range]:focus::-ms-fill-lower {
+                background: #888;
+              }
+              
+              input[type=range]:focus::-ms-fill-upper {
+                background: #ccc;
+              }
+              .field-rating{
+                justify-content: end;
+              }
+              
+                    }
+                }
+                }
+              }
+            }
+          
+          }
+        }
+        .field{
+            position: absolute;
+            right: 135px;
+        }
+        .cards{
+            .tabs .tab-panes{
+                border: none;
+                .tab-pane{
+                    padding: 0;
+                }
+            }
+            .products {
+                width: 33%;
+                .badge {
+                    position: relative;
+                    top: 14px;
+                    left: 15px;
+                    background-color: #ef4f37;
+                    border-color: #ef4f37;
+                    font-weight: 700;
+                    box-shadow:rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                }
+        
+                .product-card {
+                    box-shadow: none;
+                    border: none;
+                    a{
+                      text-decoration: none;
+                    }
+        
+                    .card-head {
+                        padding: 0;
+        
+                        .card-image {
+                            border-radius: 0.6rem;
+                            height: 250px;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+        
+                    .card-body {
+                        padding: 15px;
+                        .card-subtitle{
+                            color: grey;
+                        }
+                        .card-rating {
+                                display: flex;
+                                align-items: center;
+                                justify-content: left;
+                                font-size: 15px;
+                                gap: 10px;
+                                font-family:Arial, Helvetica, sans-serif;
+            
+                                i {
+                                    color: rgb(255, 201, 52);
+                                    filter: drop-shadow(
+                                        rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+                                        rgba(90, 125, 188, 0.05) 0px 0.25em 1em
+                                    );
+                                }
+                            }
+                    }
+                    .card-foot{
+                        padding-top: 0;
+                    }
+                }
+            }
+            .pagination{
+                justify-content: end;
+                & .active {
+                    background-color: var(--secondary) !important;
+                }
+                }
+        }
+    }
+}
+.detailed-product {
+  margin-top: 50px;
+  .row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      display: block;
+    }
+    .product-image-area {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 1024px) {
+        width: 60%;
+        margin-left: -27px;
+        padding: 0;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+        margin: 0 auto; 
+      }
+      .images {
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        @media (max-width: 425px) {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 350px;
+          gap: 20px;
+        }
+        @media (max-width: 375px) {
+          margin-left: 10px;
+          width: 290px;
+        }
+        .product-image-group {
+          height: auto;
+          max-height: 560px;
+          width: 86px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+          overflow-y: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          img {
+            width: 86px;
+            height: 110px;
+            object-fit: cover;
+            object-position: top;
+            @media (max-width: 425px) {
+              width: 70px;
+              height: 90px;
+            }
+          }
+          @media (max-width: 425px) {
+            max-height: 436px;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            overflow-x: scroll;
+            overflow-y: hidden;
+          }
+        }
+        .product-image {
+          @media (max-width: 375px) {
+            margin: 20px 0;
+            text-align: center;
+          }
+          img {
+            max-width: 436px;
+            max-height: 560px;
+            height: auto;
+            width: auto;
+            @media (max-width: 425px) {
+              max-height: 320px;
+            }
+          }
+        }
+      }
+    }
+    .product-content-area {
+      margin-left: 40px;
+      @media (max-width: 1024px) {
+        width: 40%;
+        margin-left: 10px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        padding-top: 30px;
+      }
+      @media (max-width: 425px) {
+        margin: 0;
+        width: 100%;
+      }
+      .product-detail-content {
+        .product-head {
+          p {
+            color: var(--secondary);
+            font-size: 15px;
+            font-weight: 500;
+          }
+          h1 {
+            color: var(--text);
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            @media (max-width: 425px) {
+              font-size: 30px;
+            }
+            @media (max-width: 375px) {
+              font-size: 22px;
+            }
+          }
+        }
+        .product-body {
+          margin: 20px 0;
+          .price-head {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 600;
+            span.hori {
+              margin: 0 20px;
+              font-size: 20px;
+              font-weight: 600;
+            }
+          }
+          .content {
+            padding: 20px 0;
+            p {
+              color: var(--secondary);
+              font-size: 15px;
+              font-weight: 400;
+              text-transform: capitalize;
+              margin-bottom: 0;
+            }
+          }
+          .sizes {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            button.active {
+              background-color: var(--secondary);
+              color: var(--body);
+            }
+          }
+          .icon {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            i.bx {
+              color: var(--text);
+              font-size: 24px;
+            }
+            p {
+              color: var(--text);
+              font-size: 14px;
+              font-weight: 500;
+              margin-bottom: 0;
+            }
+          }
+        }
+        .product-foot {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          .btn-group {
+            button {
+              @media (max-width: 375px) {
+                margin: 7px 0;
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+          .btn-group,
+          .icon-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @media (max-width: 375px) {
+              display: block;
+            }
+          }
+          .icon-group {
+            @media (max-width: 375px) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            i.bx {
+              color: var(--text);
+              font-size: 24px;
+              font-weight: 400;
+            }
+          }
+        }
+}
+}
+}
+
+}
+.btn-model {
+  display: none;
+}
+@media (max-width:1024px){
+  .tab-pane .row {
+    width: 110%;
+}
+
+.btn-model {
+display: none;
+}
+.section-products .filtered-cards .field {
+  position: absolute;
+  right: 11px;
+  top: 80px;
+}
+.section-products {
+  gap: 25px;
+}
+.section-products .filtered-cards {
+  width: auto;
+}
+}
+@media (max-width:768px){
+  .tab-pane .row {
+    width: 110%;
+}
+.btn-model {
+  display: block;
+  position: relative;
+  top: -32px;
+  left: 66%;
+}
+.modal {
+  --modal-width: 60%;
+}
+.filters{
+  display: none;
+}
+.tabs .tabs-items {
+  width: 100%;
+}
+.section-products .filtered-cards .field {
+  position: absolute;
+  right: 11px;
+  top: 80px;
+}
+.section-products {
+  gap: 25px;
+  flex-direction: column;
+}
+.section-products .filtered-cards .cards .products {
+  width: 100%;
+}
+.section-products .filtered-cards {
+  width: auto;
+}
+}
+@media (max-width:425px){
+  .nxt-header{
+    width: 100%;
+  }
+  .tabs .tabs-items .tab-item {
+    font-size: 9px;
+  }
+  .btn-model {
+    display: block;
+    position: relative;
+    top: -6px;
+    left: 31%;
+}
+.section-products .filtered-cards .cards .products {
+  width: 100%;
+}
+.row{
+  flex-direction: column;
+}
+}
+@media(max-width:375px){
+  .btn-model {
+    left: 19%;
+}
+.tabs .tabs-items .tab-item {
+  font-size: 7px;
+}
+}
+@media(max-width:320px){
+    .tabs .tabs-items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tabs .tabs-items .tabs-item {
+  font-size: 15px;
+    }
+    .btn-model {
+      left: 0%;
+  }
+}

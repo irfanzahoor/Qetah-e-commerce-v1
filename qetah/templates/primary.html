@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" x-data="sidebarState()">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="/assets/qetah/images/qetah-browser-removebg-preview.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %} QETAH | Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/qetah/css/kit.css" />
+    <link rel="stylesheet" href="/assets/qetah/css/style.css" />
+</head>
+<body> 
+  <!-- SIDEBAR -->
+  {% include "templates/includes/sidebar.html" %}
+  <!-- SIDEBAR -->
+
+  <!-- HEAD -->
+  {% include "templates/includes/header.html" %}
+  <!-- HEAD -->
+
+  <!-- CONTENT -->
+  {% block content %} {% endblock %}
+  <!-- CONTENT -->
+
+  <!-- FOOTER -->
+  {% include "templates/includes/footer.html" %}
+  <!-- FOOTER -->
+
+   <!-- SCRIPTS -->
+    <script src="/assets/qetah/js/index.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- THIRD PARTY JS -->
+    <script src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- SCRIPTS -->
+
+
+  <!--Block SCRIPTS-->
+  {% block scripts %} {% endblock %}
+  <!-- SCRIPTS-->
+
+</body>
+ {% block base_scripts %}
+  <!-- js should be loaded in body! -->
+  <script>
+    frappe.boot = {{ boot }}
+    // for backward compatibility of some libs
+    frappe.sys_defaults = frappe.boot.sysdefaults;
+  </script>
+  {{ include_script('frappe-web.bundle.js') }}
+  {% endblock %}
+
+  {%- for link in web_include_js %}
+  {{ include_script(link) }}
+  {%- endfor -%}
+
+  {%- block script %}
+  {% if colocated_js -%}
+  <script>{ { colocated_js } }</script>
+  {%- endif %}
+
+  {%- endblock %}
+  <!-- csrf_token -->
+  {%- block body_include %}{{ body_include or "" }}{% endblock -%}
+
+ 
+</html>

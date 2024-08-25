@@ -1,0 +1,18 @@
+@import "./layouts/_layouts";
+@import "./pages/_pages";
+body{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+html{
+    overflow-x: hidden;
+}
+@media (max-width:768px){
+    .program-header-navbar .navbarDrop {
+    z-index: 9999;
+    }
+    .nxt-header .navbar-brand .navbarDrop ul li {
+     margin: 15px 0px;
+    }
+}

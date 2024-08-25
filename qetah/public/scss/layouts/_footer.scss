@@ -1,0 +1,130 @@
+.small-hr {
+    margin: 0px auto;
+    width: 25%;
+    @media (max-width: 425px) {
+      width: 75%;
+    }
+  }
+  
+  footer {
+    display: flex;
+    padding: 50px;
+    gap: 300px;
+  
+    @media (max-width: 375px) {
+      padding: 20px 0;
+  }
+    .social {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+      @media (max-width: 1920px) {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+  
+      .links {
+        ul {
+          padding: 0;
+          display: flex;
+          gap: 15px;
+  
+          @media (max-width: 425px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          }
+  
+          li {
+            list-style: none;
+  
+            a {
+              text-decoration: none;
+              color: var(--secondary);
+              @media (max-width: 768px) {
+                font-size: 13px;
+                font-weight: 700;
+              }
+              @media (max-width: 425px) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+  
+      .information {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        @media (max-width: 425px) {
+          display: block;
+        }
+  
+        .p-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+  
+          .desc {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 425px) {
+              font-size: 14px;
+            }
+          }
+        }
+        .social-logo {
+          @media (max-width: 425px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+  
+    .quote {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      color: var(--secondary);
+  
+      i {
+        color: var(--secondary);
+      }
+    }
+  }
+  
+  .copy-right-hr {
+    margin: 0px auto;
+    width: 90%;
+    @media (max-width: 425px) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  .copy-right {
+    padding: 15px;
+    font-size: 15px;
+  }
+  
+  .quote {
+    @media (max-width: 425px) {
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+   }
+  }
+.copy-right-hr{
+    margin: 0px 100px;
+    width: 90%;
+}
+.copy-right{
+    padding: 15px;
+    font-size: 15px;
+}

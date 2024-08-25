@@ -1,0 +1,167 @@
+{% extends "templates/primary.html" %}
+
+{% block title %} QETAH | Contact Us  {% endblock %}
+
+{% block content %}
+  <!-- Student Header -->
+    <div class="content-area contact-section" :class="{'shifted-content': isStatic}">
+        <div class="contact-us">
+            <div class="information" data-aos="fade-right" data-aos-anchor-placement="center-center">
+                <h1 class="fw-bold">Contact Us</h1>
+                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ratione, maiores dolore odit, amet dolorem omnis, molestiae fuga nesciunt dicta blanditiis tempora error delectus ad. Deserunt dolore itaque nesciunt mollitia!</p>
+                <div class="container info">
+                    <div class="offices">
+                        <h3>Offices</h3>
+                        <p class="desc">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</p>
+                        <p class="desc">Akshya Nagar 1st Block 10th Cross, Rammurthy nagar, Bangalore-560016</p>
+                    </div>
+                    <div class="email">        
+                        <h3>Email</h3>
+                        <p class="desc">info@gmail.com</p>
+                        <p class="desc">qetah@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form" data-aos="fade-up" data-aos-anchor-placement="center-center">
+                <form action="">
+                    <h1>Get in Touch</h1>
+                    <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="field  field-dark">
+                        <input type="text" class="field-text" placeholder="Full Name*"/>
+                      </div>
+                      <div class="field field-dark">
+                        <input type="email" class="field-text" placeholder="Email*" />
+                      </div>
+                      <div class="field field-dark">
+                        <input type="text" class="field-text" placeholder="Phone No" />
+                      </div>
+                      <div class="field field-dark">
+                        <textarea class="field-textarea" rows="4" placeholder="Messsage*" ></textarea>
+                      </div>
+                      <div class="submit"> 
+                        <label class="check check-dark" ><input type="checkbox" />Checkout our <a href="/terms-and-conditions"> Terms and Conditions </a> and <a href="/privacy-policy">Privacy Policy</a>.</label>                      
+                        <br>
+                        <br>
+                        <button class="btn btn-secondary">Submit</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+      
+{% endblock %} 
+  {% block scripts %} 
+
+    <script>
+        var swiper = new Swiper('.blog-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: true,
+            mousewheel: {
+                invert: false,
+            },
+            // autoHeight: true,
+            pagination: {
+                el: '.blog-slider__pagination',
+                clickable: true,
+            }
+        });
+    </script>
+        <script>
+            const swiper1 = new Swiper('.product-slider', {
+                loop:true,
+                slidesPerView: 4,
+                spaceBetween: 30,
+            
+                autoplay: {
+                    delay: 3000,
+                    loop:true,
+                },
+            
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+    
+            document.querySelector('.backward').addEventListener('click', function(){
+                swiper1.slideNext();
+            })
+    
+            document.querySelector('.forward').addEventListener('click', function(){
+                swiper1.slidePrev();
+            })
+        </script>
+        <script>
+       var customerReviewSwiper = new Swiper('.slide-container', {
+    loop: true,
+    slidesPerView: 1,  // Ensures only one slide is shown at a time
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+        </script>
+    <script>
+        AOS.init({
+  duration: 600, // Duration of animation
+  easing: 'ease-in-out', // Animation easing
+  once: true // Animation only happens once
+});
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            // Autoplay configuration
+            autoplay: {
+              delay: 4000, // Delay between slides in milliseconds (2500ms = 2.5s)
+            disableOnInteraction: false, // Continue autoplay after user interaction
+            },
+        });
+    </script>
+    <!-- counter -->
+   <script> 
+  document.querySelectorAll('.quantity-counter').forEach(counter => {
+    let count = 0;
+
+    const counterValue = counter.querySelector('.counter-value');
+    const counterIncrement = counter.querySelector('.counter-increment');
+    const counterDecrement = counter.querySelector('.counter-decrement');
+
+    counterIncrement.addEventListener('click', () => {
+        count++;
+        counterValue.value = count;
+    });
+
+    counterDecrement.addEventListener('click', () => {
+        if (count > 0) { // Only decrement if count is greater than 0
+            count--;
+            counterValue.value = count;
+        }
+    });
+});
+   </script>
+{% endblock %}
+

@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "policy.#####",
+ "creation": "2024-06-22 19:32:43.592325",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "terms_of_use",
+  "privacy_policy",
+  "refunds_policy",
+  "cookies_policy"
+ ],
+ "fields": [
+  {
+   "fieldname": "terms_of_use",
+   "fieldtype": "Text Editor",
+   "label": "Terms of use"
+  },
+  {
+   "fieldname": "privacy_policy",
+   "fieldtype": "Text Editor",
+   "label": "Privacy Policy"
+  },
+  {
+   "fieldname": "refunds_policy",
+   "fieldtype": "Text Editor",
+   "label": "Refunds Policy"
+  },
+  {
+   "fieldname": "cookies_policy",
+   "fieldtype": "Text Editor",
+   "label": "Cookies Policy"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-06-22 19:32:43.592325",
+ "modified_by": "Administrator",
+ "module": "Qetah",
+ "name": "Policy",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

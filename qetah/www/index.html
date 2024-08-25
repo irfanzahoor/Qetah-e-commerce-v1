@@ -1,0 +1,366 @@
+{% extends "templates/primary.html" %}
+
+{% block title %} QETAH | Home {% endblock %}
+
+{% block content %}
+    <!-- Student Header -->
+
+    <div class="content-area" :class="{'shifted-content': isStatic}">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section class="s1">
+                        <h1 class="title fw-bold"><em>Discover Our New Arrivals!</em></h1>
+                        <h2 class="sub-title"> Fresh Finds Just<br>
+                            <h2 style="color: grey;"> for You</h2>
+                        </h2>
+                        <p class="txt-lg"> Stay ahead of the trends with our latest collection. We've handpicked the newest styles and must-have product just for you. Whether you're updating your wardrobe or looking for the perfect gift, our new arrivals offer something for everyone. Don't miss out on these fresh additions—shop now and be the first to own them!</p>
+                        <div x-data="{ createRipple: createRipple }">
+                            <button x-on:click="createRipple($event)" class="btn btn-secondary ripple btn-icon">
+                                See More <i class="bx bx-right-arrow-alt icon-post"></i>
+                            </button>
+                        </div>
+                    </section>
+                    <div class="image">
+                        <img src="/assets/qetah/images/home3.png" width="100px" height="100px" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="container sale"  data-aos="fade-up" data-aos-anchor-placement="center-center">
+            <div class="sale-product">
+                <div class="sale-content">
+                <span class="year">2020</span>
+                <h2 class="sale-heading">Spring Sale</h2>
+                </div>
+                <div class="sale-disc">
+                <p class="head">Don't miss the sale!</p>
+                <h2 class="disc">Get Up To 30% OFF</h2>
+                <a href="#" class="notify">Get Notified <i class="bx bx-right-arrow-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="container About">
+            <div class="badge badge-o-dark badge-pill fw-bold"  data-aos="fade-right" data-aos-anchor-placement="center-center">About Us</div>
+            <div class="container d-flex">
+                <div class="about-desc" data-aos="fade-right" data-aos-anchor-placement="center-center">
+                    <h3 class="heading">Why Choose Us ?</h3>
+                    <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, rerum laborum nemo
+                        perferendis eum maiores similique porro delectus alias, voluptatibus assumenda in a? Non laborum
+                        accusamus officiis iusto reiciendis voluptatum.</p>
+                    <br>
+                    <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, rerum laborum nemo
+                        perferendis eum maiores similique porro delectus alias, voluptatibus assumenda in a? Non laborum
+                        accusamus officiis iusto reiciendis voluptatum.</p>
+                    <div x-data="{ createRipple: createRipple }">
+                        <button x-on:click="createRipple($event)" class="btn btn-secondary ripple btn-icon">
+                            <a href="./story.html">More About Us</a> <i class="bx bx-right-arrow-alt icon-post"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="images" data-aos="fade-left" data-aos-anchor-placement="center-center">
+                    <img src="https://media.istockphoto.com/id/1494812295/photo/teamwork-manager-portrait-and-diversity-of-office-team-happy-about-hr-collaboration-we-are.webp?b=1&s=170667a&w=0&k=20&c=6cnpg7ioJ30NQhl4Aq2uloQyHZqQsitSM08x1DsMdFM=" width="450px" height="400px" alt="">
+                </div>
+            </div>
+        </div>
+        <!--product  -->
+
+        <div class="container product">
+            <div class="badge badge-o-dark badge-pill heading">product</div>
+            <h1 class="text-center">Top Selling Product</h1>
+            <!-- Slider main container -->
+            <div class="swiper product-slider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <div class="badge badge-primary badge-pill">HOT</div>
+                            <div class="card product-card">
+                                <a href="./product.html">
+                                <div class="card-head">
+                                    <img class="card-image" src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/primary/producthowcasesampleimages/JPEG/Product+Showcase-1.jpg">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Nike Space-X Shoes</div>
+                                    <div class="card-desc text-ellipsis text-ellipsis-2">
+                                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti est harum ipsa, officiis quidem quia impedit at nobis sunt, asperiores rerum accusamus reiciendis eum voluptatem debitis, illum ipsum incidunt consequatur.cipit condimentum.Lorem ipsum 
+                                            dolor sit amet, consectetur adipiscing elit. Quisque ut risus sit amet nisl suscipit condimentum. 
+                                    </div>
+                                    <div class="card-subtitle"><del>USD 1500</del></div>
+                                    <div class="card-title">USD 1000</div>
+                                    <div class="card-rating">
+                                        <i class="bx bxs-star"></i>
+                                        <span>4.9</span>(12.3k) Sold
+                                    </div>
+                                </div>
+                            </a>
+                                <div class="card-foot">
+                                    <button class="btn btn-light btn-icon btn-pill"><i class="bx bx-cart icon-pre"></i> Buy Now </button>  
+                                    <button class="btn btn-light btn-icon btn-circle bx bx-heart"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-dark btn-pill explore">Explore More</button>
+                <button class="slide-next btn btn-secondary btn-sm bx bx-right-arrow-alt"></button>
+                <button class="slide-prev btn btn-secondary btn-sm bx bx-left-arrow-alt"></button>
+            </div>
+        </div>
+        <!-- story -->
+        <div class="container Story">
+            <div class="badge badge-o-dark badge-pill fw-bold"  data-aos="fade-up" data-aos-anchor-placement="center-center">Our Story</div>
+            <div class="container d-flex">
+                <div class="images" data-aos="fade-right" data-aos-anchor-placement="center-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMVSO5_Qnbe7v-DlXEcagBf8IxIBeieQ3eyA&s" width="450px" height="400px" alt="">
+                </div>
+                <div class="story-desc" data-aos="fade-left" data-aos-anchor-placement="center-center">
+                    <h3 class="heading">Our Story</h3>
+                    <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, rerum laborum nemo
+                        perferendis eum maiores similique porro delectus alias, voluptatibus assumenda in a? Non laborum
+                        accusamus officiis iusto reiciendis voluptatum.</p>
+                    <br>
+                    <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, rerum laborum nemo
+                        perferendis eum maiores similique porro delectus alias, voluptatibus assumenda in a? Non laborum
+                        accusamus officiis iusto reiciendis voluptatum.</p>
+                    <div x-data="{ createRipple: createRipple }">
+                        <button x-on:click="createRipple($event)" class="btn btn-secondary ripple btn-icon">
+                            <a href="./story.html">Read More</a> <i class="bx bx-right-arrow-alt icon-post"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container Appointment" data-aos="fade-up" data-aos-anchor-placement="center-center">
+            <div class="text">
+                <h1>Book An Appointment</h1>
+                <p>Just book your appointment now and get your dress done</p>    
+            </div> 
+            <div class="button">
+                <button class="btn btn-pill">Click Here!</button>
+            </div>           
+        </div>
+
+        <!--Blogs -->
+
+        <div class="container Blogs" data-aos="fade-left" data-aos-anchor-placement="center-center">
+            <div class="badge badge-o-dark badge-pill">Blogs</div>
+            <div class="text">
+                <h2>Related Blogs</h2>
+                <a href="./Blogs.html">See more <i class="bx bx-right-arrow-alt"></i></a>
+            </div>
+            <p class="sub-title">Get started by reading our blogs</p>
+            <div class="swiper blog-slider">
+                <section class="swiper-wrapper blog-wrap">
+                    <div class="swiper-slide blog-section">
+                      <article
+                        class="card card-blog"
+                        data-aos-duration="1000"
+                        data-aos="fade-up"
+                        data-aos-once="true"
+                        data-aos-easing="ease-in-out"
+                      >
+                        <a class="card-image image-zoom" href="./Blogs.html">
+                          <img src="/assets/qetah/images/blogs.jpg" class="image" loading="lazy" alt="" />
+                        </a>
+                        <div class="card-body">
+                          <span class="card-badge">News</span>
+                          <h3 class="card-title">
+                            <a href="./Blogs.html"
+                              >Top 5 technologies in 2023 you should learn</a
+                            >
+                          </h3>
+                          <p class="card-subtitle">24-july-2023</p>
+                        </div>
+                      </article>
+                    </div>
+                  </section>
+                  <button class="slide-next btn btn-secondary btn-sm bx bx-right-arrow-alt"></button>
+                  <button class="slide-prev btn btn-secondary btn-sm bx bx-left-arrow-alt"></button>
+                </div>
+        </div>
+
+       <!-- customer-reviews   -->
+        <div class="container customer-reviews">
+            <div class="badge badge-o-dark badge-pill">Reviews</div>
+            <h1 class="text-center customer-say" data-aos="fade-up" data-aos-anchor-placement="center-center">What Our Customers Say</h1>
+            <div class="border text-center"></div>
+            <div class="slide-container text-center">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide review-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora fuga architecto fugit placeat laudantium beatae repellat distinctio labore culpa perspiciatis excepturi, incidunt sed quasi blanditiis nobis iste in sequi tempore.</p>
+                        <h2 class="fw-bold reviewer-name">Hassan</h2>
+                        <i class="company-name">Example Company Name</i>
+                    </div>
+                </div>
+                 <!-- Navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+      
+{% endblock %}
+  {% block scripts %} 
+
+    <script>
+        new Swiper('.product-slider', {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.slide-next',
+        prevEl: '.slide-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        425: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+    },
+});
+
+
+new Swiper('.mySwiper', {
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    },
+    autoplay: {
+        delay: 40000,
+        disableOnInteraction: false,
+    },
+});
+
+new Swiper('.blog-slider', {
+    slidesPerView: 1,
+    pagination: true,
+    navigation: {
+        nextEl: '.slide-next',
+        prevEl: '.slide-prev',
+    },
+    breakpoints: {
+        340: {
+            slidesPerView: 1,
+        },
+        425: {
+            slidesPerView: 1,
+        },
+        576: {
+            slidesPerView: 4,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+});
+    </script>
+    
+        <script>
+       var customerReviewSwiper = new Swiper('.slide-container', {
+    loop: true,
+    slidesPerView: 1,  // Ensures only one slide is shown at a time
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
+        </script>
+     <script>
+        AOS.init({
+  duration: 600, // Duration of animation
+  easing: 'ease-in-out', // Animation easing
+  once: true // Animation only happens once
+});
+    </script>
+    <!-- counter -->
+   <script> 
+  document.querySelectorAll('.quantity-counter').forEach(counter => {
+    let count = 0;
+
+    const counterValue = counter.querySelector('.counter-value');
+    const counterIncrement = counter.querySelector('.counter-increment');
+    const counterDecrement = counter.querySelector('.counter-decrement');
+
+    counterIncrement.addEventListener('click', () => {
+        count++;
+        counterValue.value = count;
+    });
+
+    counterDecrement.addEventListener('click', () => {
+        if (count > 0) { // Only decrement if count is greater than 0
+            count--;
+            counterValue.value = count;
+        }
+    });
+});
+   </script>
+   <!-- aside -->
+   <script>
+    const body = document.querySelector("body"),
+  sidebar = document.querySelector(".sidebar"),
+  toggle = document.querySelector(".toggle"),
+  modeSwitch = document.querySelector(".toggle-switch"),
+  modeText = document.querySelector(".mode-text"),
+  searchBtn = document.querySelector(".search-bar");
+
+modeSwitch.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  //   document.querySelector(".mode-text").innertext=""
+
+  if (body.classList.contains("dark")) {
+    modeText.innerText = " Light Mode ";
+  } else modeText.innerText = " Dark Mode ";
+});
+
+toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+});
+
+searchBtn.addEventListener("click", () => {
+  sidebar.classList.remove("close");
+});
+</script>
+{% endblock %}
